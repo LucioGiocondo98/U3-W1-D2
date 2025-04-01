@@ -16,6 +16,7 @@ class AllTheBooks extends Component {
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text>{book.author}</Card.Text>
+                  <Card.Text>{book.price}$</Card.Text>
                   <Button variant="primary">Buy</Button>
                 </Card.Body>
               </Card>
