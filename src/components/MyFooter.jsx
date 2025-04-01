@@ -1,7 +1,7 @@
 const MyFooter = (props) => {
   return (
-    <footer className="container-fluid bg-dark text-light flex-grow-1">
-      <div>
+    <footer>
+      <div className="container-fluid bg-dark text-light w-100">
         <p className="text-center">{props.text}-2025</p>
       </div>
     </footer>

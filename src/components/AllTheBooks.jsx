@@ -1,12 +1,12 @@
 // src/components/AllTheBooks.jsx
 import React, { Component } from "react";
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import booksData from "../data/books.json";
 
 class AllTheBooks extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <h1>Tutti i Libri</h1>
         <Row className="g-3">
           {booksData.map((book) => (
@@ -23,7 +23,7 @@ class AllTheBooks extends Component {
             </Col>
           ))}
         </Row>
-      </div>
+      </Container>
     );
   }
 }

@@ -6,14 +6,14 @@ import AllTheBooks from "./components/AllTheBooks";
 
 function App() {
   return (
-    <>
+    <div className="d-flex flex-column">
       <main className="flex-grow-1">
         <MyNav tema="dark"></MyNav>
         <Welcome></Welcome>
         <AllTheBooks></AllTheBooks>
       </main>
       <MyFooter text="Lucio"></MyFooter>
-    </>
+    </div>
   );
 }
 export default App;
