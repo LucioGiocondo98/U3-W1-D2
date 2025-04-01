@@ -8,15 +8,15 @@ class AllTheBooks extends Component {
     return (
       <div>
         <h1>Tutti i Libri</h1>
-        <Row>
+        <Row className="g-3">
           {booksData.map((book) => (
-            <Col key={book.asin} md={4} className="mb-4">
+            <Col key={book.asin} xs={6} md={3} className="mb-4">
               <Card>
                 <Card.Img variant="top" src={book.img} />
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text>{book.author}</Card.Text>
-                  <Button variant="primary">Leggi</Button>
+                  <Button variant="primary">Buy</Button>
                 </Card.Body>
               </Card>
             </Col>
