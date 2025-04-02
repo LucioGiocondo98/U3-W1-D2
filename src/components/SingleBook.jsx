@@ -41,11 +41,11 @@ class SingleBook extends Component {
                 minHeight: "275px",
                 border: selected ? "5px solid red" : "1px solid gray",
               }}
-              onClick={() =>
-                this.setState((prevState) => ({
-                  selected: !prevState.selected,
-                }))
-              }
+              onClick={() => {
+                this.setState({
+                  selected: !this.state.selected,
+                });
+              }}
             >
               <Card.Img variant="top" src={book.img} alt={book.title} />
               <Card.Body>
