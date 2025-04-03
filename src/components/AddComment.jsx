@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+/*import { Form } from "react-bootstrap";
 
 class AddComments extends Components {
   state = {
@@ -15,7 +15,7 @@ class AddComments extends Components {
         headers:{
             'Content-type':'application/json',
             authorization:{
-                
+
             }
         }
     })
@@ -36,3 +36,4 @@ class AddComments extends Components {
   }
 }
 export default AddComments;
+*/
