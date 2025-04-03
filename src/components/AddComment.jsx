@@ -13,7 +13,10 @@ class AddComments extends Components {
         method:'POST',
         body: JSON.stringify(this.state.recensione),
         headers:{
-            'Content-type':''
+            'Content-type':'application/json',
+            authorization:{
+                
+            }
         }
     })
   };
