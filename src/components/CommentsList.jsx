@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, ListGroup, Row } from "react-bootstrap";
 import SingleComment from "./SingleComment";
 const CommentsList = ({ recensioni }) => {
   return (
@@ -6,7 +6,7 @@ const CommentsList = ({ recensioni }) => {
       <Row>
         <Col>
           <h3>Recensioni</h3>
-          <ul>
+          <ListGroup>
             {recensioni.length > 0 ? (
               recensioni.map((recensione) => (
                 <SingleComment key={recensione._id} recensione={recensione} />
@@ -14,7 +14,7 @@ const CommentsList = ({ recensioni }) => {
             ) : (
               <p>Nessun commento disponibile.</p>
             )}
-          </ul>
+          </ListGroup>
         </Col>
       </Row>
     </Container>

@@ -1,10 +1,11 @@
 import React from "react";
+import { ListGroupItem } from "react-bootstrap";
 
 const SingleComment = ({ recensione }) => {
   return (
-    <li>
+    <ListGroupItem>
       {recensione.author}:{recensione.comment}
-    </li>
+    </ListGroupItem>
   );
 };
 
