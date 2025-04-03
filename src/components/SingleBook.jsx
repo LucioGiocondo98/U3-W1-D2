@@ -1,30 +1,6 @@
 import React, { Component } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
-/*
-const SingleBook = function (props) {
-  return (
-    <Container>
-      <Row>
-        <Col>
-          <Card>
-            <Card.Img
-              variant="top"
-              src={props.book.img}
-              alt={props.book.title}
-            />
-            <Card.Body>
-              <Card.Title>{props.book.title}</Card.Title>
-              <Card.Text>{props.book.price}</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
-    
-);
-};
-*/
-
+import { Card, Col } from "react-bootstrap";
+import CommentArea from "./CommentArea";
 class SingleBook extends Component {
   state = {
     selected: false,
@@ -52,6 +28,7 @@ class SingleBook extends Component {
             <Card.Text>{book.price + "$"}</Card.Text>
           </Card.Body>
         </Card>
+        {selected && <CommentArea bookId={book.asin} />}
       </Col>
     );
   }
