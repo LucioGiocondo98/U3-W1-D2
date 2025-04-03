@@ -1,4 +1,6 @@
 import { Component } from "react";
+import CommentsList from "./CommentsList";
+import { Col, Container, Row } from "react-bootstrap";
 const myToken =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VlN2FhNjFkNDM2ZTAwMTVkYTI3MDIiLCJpYXQiOjE3NDM2ODIyMTUsImV4cCI6MTc0NDg5MTgxNX0.AltXgnzUgjxMWadD4fSRbniPbVkTcbbZ6Poug9CuOD4";
 class CommentArea extends Component {
@@ -36,20 +38,17 @@ class CommentArea extends Component {
   };
   render() {
     return (
-      <div>
-        <h2>CommentArea</h2>
-        <ul>
-          {this.state.recensioni.length > 0 ? (
-            this.state.recensioni.map((recensione) => (
-              <li key={recensione._id}>
-                <strong>{recensione.author}:</strong> {recensione.comment}
-              </li>
-            ))
-          ) : (
-            <p>Nessun commento disponibile.</p>
-          )}
-        </ul>
-      </div>
+      <Container>
+        <Row>
+          <Col className="bg-warning">
+            <h2 className="text-center">Area commenti</h2>
+            <CommentsList
+              className="text-center"
+              recensioni={this.state.recensioni}
+            ></CommentsList>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
