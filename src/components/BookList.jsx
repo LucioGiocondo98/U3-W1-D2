@@ -16,7 +16,7 @@ class BookList extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col md={8}>
+          <Col xs={6} md={8}>
             <Row>
               {this.props.books.map((book) => (
                 <Col key={book.asin} sm={6} md={4} lg={3} className="mb-3">
@@ -29,7 +29,7 @@ class BookList extends Component {
               ))}
             </Row>
           </Col>
-          <Col md={4}>
+          <Col xs={6} md={4}>
             {this.state.selectedBookId ? (
               <CommentArea bookId={this.state.selectedBookId} />
             ) : (
