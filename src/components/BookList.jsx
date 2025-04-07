@@ -1,19 +1,45 @@
-import SingleBook from "./SingleBook";
-import React from "react";
+import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-const BookList = function ({ books }) {
-  return (
-    <Container className="mt-5">
-      <Row></Row>
-      <h2>BookList</h2>
-      <Row>
-        {books.map((book, i) => (
-          <Col key={i} xs={6} md={3}>
-            <SingleBook book={book} />
+import SingleBook from "./SingleBook";
+import CommentArea from "./CommentArea";
+
+class BookList extends Component {
+  state = {
+    selectedBookId: null,
+  };
+
+  handleBookSelect = (asin) => {
+    this.setState({ selectedBookId: asin });
+  };
+
+  render() {
+    return (
+      <Container fluid>
+        <Row>
+          <Col md={8}>
+            <Row>
+              {this.props.books.map((book) => (
+                <Col key={book.asin} sm={6} md={4} lg={3} className="mb-3">
+                  <SingleBook
+                    book={book}
+                    isSelected={book.asin === this.state.selectedBookId}
+                    onSelect={this.handleBookSelect}
+                  />
+                </Col>
+              ))}
+            </Row>
           </Col>
-        ))}
-      </Row>
-    </Container>
-  );
-};
+          <Col md={4}>
+            {this.state.selectedBookId ? (
+              <CommentArea bookId={this.state.selectedBookId} />
+            ) : (
+              <h4 className="text-center mt-3">Nessun libro selezionato</h4>
+            )}
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}
+
 export default BookList;
