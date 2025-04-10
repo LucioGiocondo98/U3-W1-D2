@@ -46,7 +46,7 @@ const CommentArea = function ({ bookId }) {
       });
   };
   return (
-    <Container>
+    <Container data-testid="forViewCommentArea">
       <Row>
         <Col className="bg-warning">
           <h2 className="text-center">Area commenti</h2>

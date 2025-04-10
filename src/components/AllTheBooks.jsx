@@ -8,7 +8,7 @@ const AllTheBooks = function () {
       <Row className="g-3">
         {booksData.map((book) => (
           <Col key={book.asin} xs={6} md={3} className="mb-4">
-            <Card>
+            <Card data-testid="book-card">
               <Card.Img variant="top" src={book.img} />
               <Card.Body>
                 <Card.Title>{book.title}</Card.Title>

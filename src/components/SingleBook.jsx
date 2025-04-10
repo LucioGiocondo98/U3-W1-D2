@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 const SingleBook = ({ book, isSelected, onSelect }) => {
   return (
     <Card
+      data-testid="greyCard"
       style={{
         minHeight: "275px",
         border: isSelected ? "5px solid red" : "1px solid gray",
